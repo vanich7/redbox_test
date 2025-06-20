@@ -21,13 +21,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.php
-    environment: 
+    environment:
       REDIS_HOST: redis
       DB_HOST: postgres
       DB_DATABASE: test_db
       DB_USERNAME: test_user
       DB_PASSWORD: test_passwd
-      
     volumes:
       - ./app:/var/www/html
     depends_on:
@@ -43,9 +42,7 @@ services:
       - ./app:/var/www/html
     depends_on:
       - php
-       
 
-  # Prometheus
   prometheus:
     image: prom/prometheus
     ports:
@@ -58,7 +55,6 @@ services:
     depends_on:
       - nginx-exporter
 
-  # Grafana
   grafana:
     image: grafana/grafana
     ports:
@@ -66,12 +62,9 @@ services:
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana-provisioning:/etc/grafana/provisioning
-      - ./grafana-provisioning/dashboards:/etc/grafana/provisioning/dashboards
-      - ./grafana-provisioning/datasources:/etc/grafana/provisioning/datasources
     depends_on:
       - prometheus
 
-  # Nginx Exporter
   nginx-exporter:
     image: nginx/nginx-prometheus-exporter
     ports:
