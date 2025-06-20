@@ -44,7 +44,7 @@
    - PostgreSQL
    - Redis
 
-5. **Grafana**  (см. grafana_screenshot.png)
+5. **Grafana**  (см. grafana-screenshot.png)
    Доступна по адресу:  
    [http://localhost:3000](http://localhost:3000)  
    Учетные данные по умолчанию:
