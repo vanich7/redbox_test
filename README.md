@@ -44,13 +44,14 @@
    - PostgreSQL
    - Redis
 
-5. **Grafana**  
+5. **Grafana**  (см. grafana_screenshot.png)
    Доступна по адресу:  
    [http://localhost:3000](http://localhost:3000)  
    Учетные данные по умолчанию:
    - Логин: `admin`
    - Пароль: `admin`  
    *Смените пароль при первом входе!*
+     
 
 ## Дополнительные утилиты
 
